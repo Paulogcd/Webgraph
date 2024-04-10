@@ -22,7 +22,19 @@
     <loc>https://paulogcd.github.io/Webgraph/index.html</loc>
   </url>
   <url>
+    <loc>https://paulogcd.github.io/Webgraph/reference/edgelist_of.html</loc>
+  </url>
+  <url>
+    <loc>https://paulogcd.github.io/Webgraph/reference/graph_from_webpage.html</loc>
+  </url>
+  <url>
     <loc>https://paulogcd.github.io/Webgraph/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://paulogcd.github.io/Webgraph/reference/links_of.html</loc>
+  </url>
+  <url>
+    <loc>https://paulogcd.github.io/Webgraph/reference/network_from_webpage1.html</loc>
   </url>
   <url>
     <loc>https://paulogcd.github.io/Webgraph/reference/title_of.html</loc>
