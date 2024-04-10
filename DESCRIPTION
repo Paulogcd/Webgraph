@@ -15,7 +15,9 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
-    rvest
+    igraph,
+    rvest,
+    stringr
 URL: https://github.com/Paulogcd/Webgraph, https://paulogcd.github.io/Webgraph/
 BugReports: https://github.com/Paulogcd/Webgraph/issues
 VignetteBuilder: knitr
