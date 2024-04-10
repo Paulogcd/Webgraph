@@ -1,0 +1,21 @@
+---
+title: "vignette-Webgraph-1"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{vignette-Webgraph-1}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Hello, this is the test for the first Vignette of the Webgraph package. 
+
+```{r setup}
+library(Webgraph)
+```
