@@ -1,5 +1,5 @@
 Package: Webgraph
-Title: Edgelist of webpage networks.
+Title: Edgelist of webpage networks
 Version: 0.0.0.9000
 Authors@R: 
     person("Paulo", "Gugelmo Cavalheiro Dias", , "gugelmopaulo@gmail.com", role = c("aut", "cre"),

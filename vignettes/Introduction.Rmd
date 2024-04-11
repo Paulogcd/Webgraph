@@ -42,7 +42,8 @@ This function still needs to be implemented.
 
 In the case that you want to collect the data of the network formed by the connections of pages aoround one main target, it is recommended that you use the `network_from_webpage()` function. Currently, only the prototype `network_from_webpage1()` function exists. This function takes not only the target as a parameter, but also the `iteration` value, that is the number of levels you want the scrapping process to go. You can use it as : 
 
-```{r setup}
+```{r}
+library(Webgraph)
 library(igraph)
 target = "http://google.com"
 n <- network_from_webpage1(target, iteration = 2)
