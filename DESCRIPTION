@@ -2,9 +2,9 @@ Package: Webgraph
 Title: Edgelist of webpage networks.
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Paulo", "Gugelmo Cavalheiro Dias", , "gugelmopaulo@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: The Webgraph package is still undergoing major change. It is made to scrap webpage data to build graph and networks from them. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

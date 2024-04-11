@@ -1,0 +1,87 @@
+---
+title: "Introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+## The Webgraph package is still under development, some features may not be working right now. 
+
+In this article, we will introduce you to the basics of Webgraph. 
+
+
+You can first install the Webgraph package through the `install_github()` function of the `devtools` package : 
+
+```{r setup}
+devtools::install_github("Paulogcd/Webgraph")
+```
+
+## How to make edgelists 
+
+The main feature of the Webgraph package is creating edgelists of webpages connections. For that, several options are possible, depending on the number of webpages you are collecting data on : 
+
+1. Several webpages 
+2. Several webpages around one target
+3. One webpage
+
+### Several webpages
+
+In the case that you want to collect the data of connections between several webpages around one target, it is recommended that you use the `edgelists_of()` function. 
+
+This function still needs to be implemented. 
+
+### Several webpages around one target
+
+In the case that you want to collect the data of the network formed by the connections of pages aoround one main target, it is recommended that you use the `network_from_webpage()` function. Currently, only the prototype `network_from_webpage1()` function exists. This function takes not only the target as a parameter, but also the `iteration` value, that is the number of levels you want the scrapping process to go. You can use it as : 
+
+```{r setup}
+library(igraph)
+target = "http://google.com"
+n <- network_from_webpage1(target, iteration = 2)
+g <- graph_from_data_frame(n)
+plot(g,
+     layout=layout_with_fr,
+     vertex.size=4,
+     vertex.label=NA,
+     vertex.label.dist=0.5,
+     vertex.color="red",
+     edge.arrow.size=0.5)
+```
+
+### One webpage
+
+In the case that you want to collect the data of the links of only one page, you can use the `edgelist_of()` or the `network_from_webpage1()` (with `iteration=1`) functions. You can use them as : 
+
+```{r}
+target = "http://google.com"
+
+# Function graph_from_webpage() :
+
+g1 <- graph_from_webpage(target)
+plot(g1,
+     layout=layout_with_fr,
+     vertex.size=4,
+     vertex.label=NA,
+     vertex.label.dist=0.5,
+     vertex.color="red",
+     edge.arrow.size=0.5)
+
+# Function network_from_webpage1 :
+n2 <- network_from_webpage1(target, iteration = 1)
+g2 <- graph_from_data_frame(n2)
+plot(g2,
+     layout=layout_with_fr,
+     vertex.size=4,
+     vertex.label=NA,
+     vertex.label.dist=0.5,
+     vertex.color="red",
+     edge.arrow.size=0.5)
+```
