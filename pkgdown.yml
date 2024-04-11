@@ -2,8 +2,8 @@ pandoc: 3.1.11
 pkgdown: 2.0.8
 pkgdown_sha: ~
 articles:
-  vignette-Webgraph-1: vignette-Webgraph-1.html
-last_built: 2024-04-11T19:51Z
+  Introduction: Introduction.html
+last_built: 2024-04-11T20:50Z
 urls:
   reference: https://paulogcd.github.io/Webgraph/reference
   article: https://paulogcd.github.io/Webgraph/articles
