@@ -2,7 +2,7 @@
 % Please edit documentation in R/title_of.R
 \name{title_of}
 \alias{title_of}
-\title{Title_of function : This function gets the title of a certain webpage.}
+\title{Title_of function}
 \usage{
 title_of(target, collapse = T)
 }
@@ -12,10 +12,12 @@ title_of(target, collapse = T)
 \item{collapse}{A logical that indicates if you want to merge titles in case of the webpage having more than one title element.}
 }
 \value{
+Returns a character vector with the title of the targeted webpage.
+
 The vector of titles.
 }
 \description{
-Title_of function : This function gets the title of a certain webpage.
+This function gets the title of a certain webpage.
 }
 \examples{
 target <- "https://en.wikipedia.org/wiki/R_(programming_language)"

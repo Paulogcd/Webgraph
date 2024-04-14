@@ -2,7 +2,7 @@
 % Please edit documentation in R/links_of.R
 \name{links_of}
 \alias{links_of}
-\title{Links_of function : This function gets the links of a certain webpage.}
+\title{Links_of function}
 \usage{
 links_of(target, full_URL = T, titles = F, origin = F)
 }
@@ -16,10 +16,12 @@ links_of(target, full_URL = T, titles = F, origin = F)
 \item{origin}{A logical value indicating if you want to return the origin of the link (external/internal) in the final dataframe.}
 }
 \value{
+Returns a dataframe of the links of the targeted webpage.
+
 A dataframe with the links of a certain webpage, its source nature (external or internal), and some additional informaiton.
 }
 \description{
-Links_of function : This function gets the links of a certain webpage.
+This function gets the links of a certain webpage.
 }
 \examples{
 target = "https://en.wikipedia.org/wiki/R_(programming_language)"

@@ -22,7 +22,7 @@ You can first install the Webgraph package through the `install_github()` functi
 
 ```{r setup}
 library(devtools)
-install_github("Paulogcd/Webgraph")
+install_github("Paulogcd/Webgraph", quiet = TRUE)
 ```
 
 ## How to make edgelists 

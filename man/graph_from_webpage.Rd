@@ -2,15 +2,18 @@
 % Please edit documentation in R/graph_from_webpage.R
 \name{graph_from_webpage}
 \alias{graph_from_webpage}
-\title{Graph_from_webpage function : This function allows to get a graph object from a certain webpage.}
+\title{Graph_from_webpage function}
 \usage{
 graph_from_webpage(target)
 }
 \arguments{
 \item{target}{The target file you are targeting (Usually a web adress).}
 }
+\value{
+Returns an igraph graph object based on the direct connections of the targeted webpage.
+}
 \description{
-Graph_from_webpage function : This function allows to get a graph object from a certain webpage.
+This function allows to get a graph object from a certain webpage.
 }
 \examples{
 

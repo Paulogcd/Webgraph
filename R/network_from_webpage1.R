@@ -1,8 +1,11 @@
 
-#' Network_from_webpage1 function : This function allows to get a graph object from a certain webpage. The network_from_webpage function differs from the get_graph function due to the fact that get_graph only gets the graph for one page, and network_from_webpage gets the graph of the connected pages also.
+#' Network_from_webpage1 function
+#' 
+#' This function allows to get a graph object from a certain webpage. The network_from_webpage function differs from the get_graph function due to the fact that get_graph only gets the graph for one page, and network_from_webpage gets the graph of the connected pages also.
 #' 
 #' @param target The target file you are targeting (Usually a web adress).
 #' @param iteration The number of iteration you want. If set to one, this function is equivalent to the "graph_from_webpage() function."
+#' @return Return a dataframe with the edgelist of the network. 
 #' @export 
 #' 
 #' @importFrom stats na.omit
@@ -24,6 +27,7 @@
 
 # With the first iteration being the equivalent as the graph of the intial page
 network_from_webpage1 = function (target, iteration = 1) {
+   
    start_time <- Sys.time()
 
     # Intitialisation :
@@ -41,7 +45,7 @@ network_from_webpage1 = function (target, iteration = 1) {
         for (a in (2:iteration)){
             all_el[[a]] <- list()
             new_targets[[a]] <- list()
-            for (i in (1:length(new_targets[[a-1]]))){
+            for (i in (seq_along(new_targets[[a-1]]))){
                 all_el[[a]][[i]] <- list()
                 all_el[[a]][[i]] <- edgelist_of(new_targets[[a-1]][i])
                 new_targets[[a]] <- c(unlist(new_targets[[a]]),unlist(all_el[[a]][[i]]["TO"],use.names=FALSE))
@@ -67,7 +71,7 @@ network_from_webpage1 = function (target, iteration = 1) {
 
     end_time <- Sys.time()
     time_taken <- end_time - start_time
-    print(time_taken)
+    message("Time for network_from_webpage1 : ", time_taken, " seconds.")
 
     return(df)
 }
@@ -78,4 +82,8 @@ network_from_webpage1 = function (target, iteration = 1) {
     # arguments imply differing number of rows: 0, 1
     # class(N3)
     # dim(N3)
+    # Now : 
+    # N3 <- network_from_webpage1(target, iteration = 3)
+    # gives :
+    # Error in `[.data.frame`(d, "url") : undefined columns selected
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/edgelist_of.R
 \name{edgelist_of}
 \alias{edgelist_of}
-\title{Edgelist_of function : This function allows to get an edgelist of the links of a certain webpage.}
+\title{Edgelist_of function}
 \usage{
 edgelist_of(
   target,
@@ -23,11 +23,15 @@ edgelist_of(
 
 \item{origin}{A logical value indicating if you want to return the origin of the link (external/internal) in the final dataframe.}
 }
+\value{
+Returns a dataframe object with the information of the edgelist of the connections of the targeted webpage.
+}
 \description{
-The edge list also includes a column of source, that takes E if external page, and I if it is an internal page.
+This function allows to get an edgelist of the links of a certain webpage. The edge list also includes a column of source, that takes E if external page, and I if it is an internal page.
 }
 \examples{
 
 target = "https://en.wikipedia.org/wiki/R_(programming_language)"
-edgelist_of(target)
+el <- edgelist_of(target)
+summary (el)
 }
