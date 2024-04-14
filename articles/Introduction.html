@@ -88,22 +88,8 @@ package :</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span></span>
 <span><span class="co">#&gt; Loading required package: usethis</span></span>
-<span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Paulogcd/Webgraph"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Using github PAT from envvar GITHUB_PAT. Use `gitcreds::gitcreds_set()` and unset GITHUB_PAT in .Renviron (or elsewhere) if you want to use the more secure git credential store instead.</span></span>
-<span><span class="co">#&gt; Downloading GitHub repo Paulogcd/Webgraph@HEAD</span></span>
-<span><span class="co">#&gt; cpp11 (NA -&gt; 0.4.7) [CRAN]</span></span>
-<span><span class="co">#&gt; Installing 1 packages: cpp11</span></span>
-<span><span class="co">#&gt; Installing package into '/home/runner/work/_temp/Library'</span></span>
-<span><span class="co">#&gt; (as 'lib' is unspecified)</span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="color: #00BBBB;">R CMD build</span> <span style="color: #00BBBB;">─────────────────────────────────────────────────────────────────</span></span></span>
-<span><span class="co">#&gt; * checking for file ‘/tmp/RtmpTWP35U/remotes19dd1d2b999f/Paulogcd-Webgraph-6d8e69c/DESCRIPTION’ ... OK</span></span>
-<span><span class="co">#&gt; * preparing ‘Webgraph’:</span></span>
-<span><span class="co">#&gt; * checking DESCRIPTION meta-information ... OK</span></span>
-<span><span class="co">#&gt; * checking for LF line-endings in source and make files and shell scripts</span></span>
-<span><span class="co">#&gt; * checking for empty or unneeded directories</span></span>
-<span><span class="co">#&gt; * building ‘Webgraph_0.0.0.9000.tar.gz’</span></span>
-<span><span class="co">#&gt; Installing package into '/home/runner/work/_temp/Library'</span></span>
-<span><span class="co">#&gt; (as 'lib' is unspecified)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Paulogcd/Webgraph"</span>, quiet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Installing 1 packages: cpp11</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="how-to-make-edgelists">How to make edgelists<a class="anchor" aria-label="anchor" href="#how-to-make-edgelists"></a>
@@ -147,7 +133,25 @@ you want the scrapping process to go. You can use it as :</p>
 <span><span class="co">#&gt;     union</span></span>
 <span><span class="va">target</span> <span class="op">=</span> <span class="st">"http://google.com"</span></span>
 <span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/network_from_webpage1.html">network_from_webpage1</a></span><span class="op">(</span><span class="va">target</span>, iteration <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Time difference of 5.429765 secs</span></span>
+<span><span class="co">#&gt; Time for edgelist_of http://google.com: 0.109718084335327 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of https://www.google.com/imghp?hl=en&amp;tab=wi: 0.138445615768433 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of http://maps.google.com/maps?hl=en&amp;tab=wl: 0.240963459014893 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of https://play.google.com/?hl=en&amp;tab=w8: 0.524559736251831 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of https://www.youtube.com/?tab=w1: 0.191280841827393 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of https://news.google.com/?tab=wn: 0.238469362258911 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of https://mail.google.com/mail/?tab=wm: 0.537929534912109 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of https://drive.google.com/?tab=wo: 0.547325372695923 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of https://www.google.com/intl/en/about/products?tab=wh: 0.194056749343872 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of http://www.google.com/history/optout?hl=en: 0.741497039794922 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of http://google.com/preferences?hl=en: 0.120362997055054 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=http://www.google.com/&amp;ec=GAZAAQ: 0.297790288925171 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of http://google.com/advanced_search?hl=en&amp;authuser=0: 0.312436580657959 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of http://google.com/intl/en/ads/: 0.241690874099731 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of http://google.com/services/: 0.0728864669799805 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of http://google.com/intl/en/about.html: 0.179411888122559 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of http://google.com/intl/en/policies/privacy/: 0.0720691680908203 seconds.</span></span>
+<span><span class="co">#&gt; Time for edgelist_of http://google.com/intl/en/policies/terms/: 0.0735063552856445 seconds.</span></span>
+<span><span class="co">#&gt; Time for network_from_webpage1 : 4.84938979148865 seconds.</span></span>
 <span><span class="va">g</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r.igraph.org/reference/graph_from_data_frame.html" class="external-link">graph_from_data_frame</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning in graph_from_data_frame(n): In `d' `NA' elements were replaced with</span></span>
 <span><span class="co">#&gt; string "NA"</span></span>
@@ -173,6 +177,8 @@ functions. You can use them as :</p>
 <span><span class="co"># Function graph_from_webpage() :</span></span>
 <span></span>
 <span><span class="va">g1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/graph_from_webpage.html">graph_from_webpage</a></span><span class="op">(</span><span class="va">target</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Time for edgelist_of http://google.com: 0.0806617736816406 seconds.</span></span>
+<span><span class="co">#&gt; Time for graph_from_webpage : 0.0823814868927002seconds.</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">g1</span>,</span>
 <span>     layout<span class="op">=</span><span class="va">layout_with_fr</span>,</span>
 <span>     vertex.size<span class="op">=</span><span class="fl">4</span>,</span>
@@ -185,7 +191,8 @@ functions. You can use them as :</p>
 <code class="sourceCode R"><span></span>
 <span><span class="co"># Function network_from_webpage1 :</span></span>
 <span><span class="va">n2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/network_from_webpage1.html">network_from_webpage1</a></span><span class="op">(</span><span class="va">target</span>, iteration <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Time difference of 0.09378958 secs</span></span>
+<span><span class="co">#&gt; Time for edgelist_of http://google.com: 0.0753128528594971 seconds.</span></span>
+<span><span class="co">#&gt; Time for network_from_webpage1 : 0.0757803916931152 seconds.</span></span>
 <span><span class="va">g2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r.igraph.org/reference/graph_from_data_frame.html" class="external-link">graph_from_data_frame</a></span><span class="op">(</span><span class="va">n2</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">g2</span>,</span>
 <span>     layout<span class="op">=</span><span class="va">layout_with_fr</span>,</span>
